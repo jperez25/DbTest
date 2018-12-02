@@ -1,0 +1,2 @@
+class Commity < ApplicationRecord
+end

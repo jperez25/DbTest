@@ -1,0 +1,27 @@
+<%= form_with(model: administration, local: true) do |form| %>
+  <% if administration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(administration.errors.count, "error") %> prohibited this administration from being saved:</h2>
+
+      <ul>
+      <% administration.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :faculty %>
+    <%= form.number_field :faculty, id: :administration_faculty %>
+  </div>
+
+  <div class="field">
+    <%= form.label :program %>
+    <%= form.number_field :program, id: :administration_program %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

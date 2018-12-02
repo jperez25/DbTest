@@ -1,0 +1,2 @@
+module CommitiesHelper
+end

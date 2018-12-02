@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Commities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @commities.each do |commity| %>
+      <tr>
+        <td><%= commity.name %></td>
+        <td><%= link_to 'Show', commity %></td>
+        <td><%= link_to 'Edit', edit_commity_path(commity) %></td>
+        <td><%= link_to 'Destroy', commity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Commity', new_commity_path %>
